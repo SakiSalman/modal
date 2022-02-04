@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200&display=swap');
+
+body{
+    font-family: poppins;
+}
+#modal-container {
+	display: flex;
+	justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+#modal-container button {
+	padding: 10px 50px;
+    background-color: rgb(23, 209, 241);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+#modal-container button:hover{
+    background-color: antiquewhite;
+    color: black;
+}
+
+
+/* Modal css start */
+.moda-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1000px);
+}
+.moda-container.active{
+    transform: translateY(0px);
+    transition: .7s ease-in-out;
+}
+.modal-area {
+    width: 600px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 11px 2px #c7c6c6dd;
+}
+.modal-header{
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.modal-header h2{
+   color: rgb(10, 123, 216);
+    
+}
+.modal-header .close{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: none;
+    box-shadow: 0 0 11px 2px #c7c6c6dd;
+    cursor: pointer;
+
+}
+
+.modal-body{
+    padding: 10px 20px;
+}
+
+.modal-footer{
+    padding: 15px 20px;
+    display: flex;
+    justify-content: end;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+
+}
+#editing{
+    border: none;
+    background: none;
+    font-size: 15px;
+    color: rgb(10, 164, 224);
+    font-weight: 400;
+    cursor: pointer;
+}
+#discrd,#save{
+  padding: 10px 30px;
+  border: none;
+  background-color:#0aa4e0;
+  color: #ffff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#discrd,#save:hover{
+    background-color: #0487bb;
+}
+
+
+/* alert css */
+.customalert-wrap{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.698);
+    justify-content: center;
+    align-items: center;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-1000px);
+    transform-origin: center;
+    transition: .8s;
+
+}
+.customalert-wrap.active{
+    display: flex;
+    transform: translateY(0px);
+
+}
+.alert-area{
+    width: 600px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 11px 2px #c7c6c6dd;
+    transform: translateY(-1000px);
+
+}
+.alert-area.active{
+    transition: .5s;
+    transform: translateY(0px);
+
+}
+.alert-area .alert-header{
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(221, 221, 221, 0.657);
+}
+.alert-area .alert-header .close{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.alert-area .alert-body{
+    padding: 10px 20px;
+
+}
+.alert-area .alert-footer{
+    padding: 8px 20px;
+    border-top: 1px solid rgba(221, 221, 221, 0.657);
+    display: flex;
+    justify-content: end;
+}
