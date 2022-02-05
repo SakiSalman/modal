@@ -34,13 +34,18 @@ body{
     width: 100%;
     height: 100%;
     display: flex;
+    background-color: #ddd;
     justify-content: center;
     align-items: center;
-    transform: translateY(-1000px);
+    transform: translateY(-100px);
+    opacity: 0;
+    pointer-events: none;
 }
 .moda-container.active{
     transform: translateY(0px);
     transition: .7s ease-in-out;
+    opacity: 1;
+    pointer-events: auto;
 }
 .modal-area {
     width: 600px;
@@ -119,14 +124,15 @@ body{
     display: none;
     align-items: center;
     justify-content: center;
-    transform: translateY(-1000px);
+    transform: translateY(-100px);
     transform-origin: center;
-    transition: .8s;
+    opacity: 0;
 
 }
 .customalert-wrap.active{
     display: flex;
     transform: translateY(0px);
+    opacity: 1;
 
 }
 .alert-area{
@@ -135,12 +141,17 @@ body{
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 11px 2px #c7c6c6dd;
-    transform: translateY(-1000px);
+    transform: translateY(-100px);
+    opacity: 0;
+    pointer-events: none;
+
 
 }
 .alert-area.active{
     transition: .5s;
     transform: translateY(0px);
+    opacity: 1;
+    pointer-events: auto;
 
 }
 .alert-area .alert-header{
